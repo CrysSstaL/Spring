@@ -2,10 +2,12 @@ package org.example;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ProjectConfig {
     @Bean(name = "miki")
+    @Primary
     Parrot parrot1() {
         var p = new Parrot();
         p.setName("Koko");
