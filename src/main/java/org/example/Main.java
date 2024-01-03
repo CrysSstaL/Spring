@@ -12,7 +12,7 @@ public class Main {
 
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Parrot p = context.getBean("parrot2",Parrot.class);
+        Parrot p = context.getBean("MIki",Parrot.class);
         System.out.println(p.getName());
     }
 }

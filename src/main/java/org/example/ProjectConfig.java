@@ -5,19 +5,19 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ProjectConfig {
-    @Bean
+    @Bean(name = "miki")
     Parrot parrot1() {
         var p = new Parrot();
         p.setName("Koko");
         return p;
     }
-    @Bean
+    @Bean(value = "Miki")
     Parrot parrot2() {
         var p = new Parrot();
         p.setName("Miki");
         return p;
     }
-    @Bean
+    @Bean("MIki")
     Parrot parrot3() {
         var p = new Parrot();
         p.setName("Riki");
