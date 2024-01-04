@@ -1,10 +1,5 @@
 package main;
 
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-
-@Component
 public class Parrot {
 
     private String name;
@@ -15,11 +10,6 @@ public class Parrot {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @PostConstruct
-    public void init(){
-        this.name = "Kiki";
     }
 }
 
