@@ -3,29 +3,22 @@ package main;
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.function.Supplier;
 
 public class Main {
 
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Parrot x = new Parrot();
-        x.setName("Kiki");
-        Supplier<Parrot> parrotSupplierX = () -> x; // обьект x добавляется в контекст
-        context.registerBean("parrot1", Parrot.class, parrotSupplierX);
+        Person person = context.getBean(Person.class);
 
-        Parrot y = new Parrot();
-        y.setName("Koko");
-        Supplier<Parrot> parrotSupplierY = () -> y;
-        context.registerBean("parrot2", Parrot.class,
-                parrotSupplierY, bc-> bc.setPrimary(true)); // bc - bean customizer!!!
+        Parrot parrot = context.getBean(Parrot.class);
 
-        Parrot p = context.getBean(Parrot.class);  // p - primary
-        Parrot q = context.getBean("parrot1",Parrot.class); // get with beanName
+        System.out.println("Person's name: " + person.getName());
 
-        System.out.println(q.getName());
-        System.out.println(p.getName());
+        System.out.println("Parrot's name: " + parrot.getName());
+
+        System.out.println("Person's parrot : " + person.getParrot());
+
     }
 }
 

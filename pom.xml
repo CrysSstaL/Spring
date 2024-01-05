@@ -11,8 +11,8 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.2.6.RELEASE</version>
+            <artifactId>Spring-context</artifactId>
+            <version>5.2.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>javax.annotation</groupId>
