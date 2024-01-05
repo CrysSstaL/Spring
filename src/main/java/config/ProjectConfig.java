@@ -18,6 +18,7 @@ public class ProjectConfig {
     public Person person(){
         Person p = new Person();
         p.setName("Ella");
+        p.setParrot(parrot());    // Монтаж бинов путем прямого вызова
         return p;
     }
 }

@@ -15,4 +15,8 @@ public class Person {
     public Parrot getParrot(){
         return parrot;
     }
+
+    public void setParrot(Parrot p){
+        this.parrot = p;
+    }
 }
