@@ -8,6 +8,10 @@ public class Person {
     private String name = "Ella";
     private Parrot parrot;
 
+    public Person(Parrot parrot1){
+        this.parrot = parrot1;
+    }
+
 
     public String getName(){
         return name;
