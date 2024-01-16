@@ -1,6 +1,9 @@
 package main.chapter_four.repositories;
 
 import main.chapter_four.model.Comment;
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class DBCommentRepository implements CommentRepository {
     @Override
