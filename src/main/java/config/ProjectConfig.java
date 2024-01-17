@@ -7,13 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 @Configuration
+@ComponentScan(basePackages = {"main.chapter_four.services", "main.chapter_four.repositories"})
 public class ProjectConfig {
-
-    @Bean
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-    public CommentService commentService(){
-        return new CommentService();
-    }
 }
