@@ -1,7 +1,8 @@
 package main.chapter_four.repositories;
 
 import main.chapter_four.model.Comment;
+import org.springframework.stereotype.Repository;
 
-public interface CommentRepository {
-    void storeComment(Comment comment);
+@Repository
+public class CommentRepository {
 }
