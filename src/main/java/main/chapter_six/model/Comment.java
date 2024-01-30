@@ -18,5 +18,12 @@ public class Comment {
     public void setText(String text){
         this.text = text;
     }
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "text='" + text + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }
 
