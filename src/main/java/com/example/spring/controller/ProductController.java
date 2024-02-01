@@ -22,20 +22,18 @@ public class ProductController {
         return "products.html";
     }
 
-    @PostMapping(value = "/products")
-    public String addProduct(@RequestParam String name,
-                             @RequestParam double price,
-                             Model model){
-
-        Product p = new Product();
-        p.setName(name);
-        p.setPrice(price);
-
-        productService.addProduct(p);
-
-        var products = productService.findAll();
-        model.addAttribute("products", products);
-
-        return "products.html";
+    @Controller
+    public class ProductsController {
+        // остальной код
+        @PostMapping("/products")
+        public String addProduct(
+                Product p,
+                Model model
+        ) {
+            productService.addProduct(p);
+            var products = productService.findAll();
+            model.addAttribute("products", products);
+            return "products.html";
+        }
     }
 }
